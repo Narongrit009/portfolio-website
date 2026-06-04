@@ -8,26 +8,28 @@ const copy = {
     desc: "สามทักษะหลักที่ช่วยให้แบรนด์ดูดี สื่อสารชัด และทำงานเป็นระบบ",
     featured: "Featured Skill",
     skills: [
-      {
-        icon: "palette" as IconName,
-        title: "Graphic Design",
-        desc: "ออกแบบ Poster, Social Media, Branding, Menu, Ads และ Presentation ให้สวย อ่านง่าย และตรงเป้าหมาย",
-        tools: ["Photoshop", "Illustrator", "Canva", "Figma"],
-      },
-      {
-        icon: "video" as IconName,
-        title: "Video Editing",
-        desc: "ตัดต่อ Short-form, Reels, TikTok, Promo Video พร้อม Subtitle, Hook และ CTA สำหรับงานขาย",
-        tools: ["Premiere Pro", "After Effects", "CapCut"],
-        featured: true,
-      },
-      {
-        icon: "code" as IconName,
-        title: "Programming",
-        desc: "พัฒนา Website, Automation และ UI ด้วยเทคโนโลยีสมัยใหม่ พร้อม Responsive Design",
-        tools: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      },
-    ],
+  {
+    icon: "palette" as IconName,
+    title: "Graphic Design",
+    desc: "ออกแบบ Poster, Social Media, Branding, Menu, Ads และ Presentation ให้สวย อ่านง่าย และตรงเป้าหมาย",
+    tools: ["Photoshop", "Illustrator", "Canva", "Figma"],
+    featured: false,
+  },
+  {
+    icon: "video" as IconName,
+    title: "Video Editing",
+    desc: "ตัดต่อ Short-form, Reels, TikTok, Promo Video พร้อม Subtitle, Hook และ CTA สำหรับงานขาย",
+    tools: ["Premiere Pro", "After Effects", "CapCut"],
+    featured: true,
+  },
+  {
+    icon: "code" as IconName,
+    title: "Programming",
+    desc: "พัฒนา Website, Automation และ UI ด้วยเทคโนโลยีสมัยใหม่ พร้อม Responsive Design",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    featured: false,
+  },
+],
   },
   en: {
     eyebrow: "Expertise",
@@ -35,26 +37,28 @@ const copy = {
     desc: "Three core skills that help brands look better, communicate clearly, and work smarter.",
     featured: "Featured Skill",
     skills: [
-      {
-        icon: "palette" as IconName,
-        title: "Graphic Design",
-        desc: "Designing posters, social media visuals, branding, menus, ads, and presentations with clear communication.",
-        tools: ["Photoshop", "Illustrator", "Canva", "Figma"],
-      },
-      {
-        icon: "video" as IconName,
-        title: "Video Editing",
-        desc: "Editing short-form videos, Reels, TikToks, and promo content with subtitles, hooks, and CTA for marketing.",
-        tools: ["Premiere Pro", "After Effects", "CapCut"],
-        featured: true,
-      },
-      {
-        icon: "code" as IconName,
-        title: "Programming",
-        desc: "Building websites, automation, and responsive user interfaces with modern front-end technologies.",
-        tools: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      },
-    ],
+  {
+    icon: "palette" as IconName,
+    title: "Graphic Design",
+    desc: "Designing posters, social media visuals, branding, menus, ads, and presentations with clear communication.",
+    tools: ["Photoshop", "Illustrator", "Canva", "Figma"],
+    featured: false,
+  },
+  {
+    icon: "video" as IconName,
+    title: "Video Editing",
+    desc: "Editing short-form videos, Reels, TikToks, and promo content with subtitles, hooks, and CTA for marketing.",
+    tools: ["Premiere Pro", "After Effects", "CapCut"],
+    featured: true,
+  },
+  {
+    icon: "code" as IconName,
+    title: "Programming",
+    desc: "Building websites, automation, and responsive user interfaces with modern front-end technologies.",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    featured: false,
+  },
+],
   },
 } as const;
 
