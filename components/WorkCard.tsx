@@ -17,9 +17,9 @@ export default function WorkCard({
   onOpen: (project: Project) => void;
 }) {
   const hasRealImage =
-    project.imageUrl &&
-    !project.imageUrl.includes("YOUR_CLOUD_NAME") &&
-    !project.imageUrl.includes("YOUR_");
+    Boolean(project.imageUrl) &&
+    !project.imageUrl?.includes("YOUR_CLOUD_NAME") &&
+    !project.imageUrl?.includes("YOUR_");
 
   const youtubeThumbnail =
     project.youtubeId && !project.youtubeId.includes("YOUR_")
@@ -31,7 +31,11 @@ export default function WorkCard({
   return (
     <button
       type="button"
-      onClick={() => onOpen(project)}
+      onClick={() => {
+  if (typeof onOpen === "function") {
+    onOpen(project);
+  }
+}}
       className="group block w-full text-left"
     >
       <article className="h-full overflow-hidden rounded-[2rem] border border-white/80 bg-white/75 shadow-[0_18px_50px_rgba(14,125,228,.12)] backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(14,125,228,.20)]">
