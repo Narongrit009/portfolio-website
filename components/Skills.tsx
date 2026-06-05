@@ -5,28 +5,28 @@ const copy = {
   th: {
     eyebrow: "Expertise",
     title: "ความสามารถ",
-    desc: "สามทักษะหลักที่ช่วยให้แบรนด์ดูดี สื่อสารชัด และทำงานเป็นระบบ",
+    desc: "สามทักษะที่ช่วยให้แบรนด์ดูดี สื่อสารชัด และทำงานเป็นระบบ",
     featured: "Featured Skill",
     skills: [
   {
     icon: "palette" as IconName,
     title: "Graphic Design",
     desc: "ออกแบบ Poster, Social Media, Branding, Menu, Ads และ Presentation ให้สวย อ่านง่าย และตรงเป้าหมาย",
-    tools: ["Photoshop", "Illustrator", "Canva", "Figma"],
+    tools: ["Photoshop", "Canva", "Figma"],
     featured: false,
   },
   {
     icon: "video" as IconName,
     title: "Video Editing",
     desc: "ตัดต่อ Short-form, Reels, TikTok, Promo Video พร้อม Subtitle, Hook และ CTA สำหรับงานขาย",
-    tools: ["Premiere Pro", "After Effects", "CapCut"],
+    tools: ["CapCut"],
     featured: true,
   },
   {
     icon: "code" as IconName,
     title: "Programming",
-    desc: "พัฒนา Website, Automation และ UI ด้วยเทคโนโลยีสมัยใหม่ พร้อม Responsive Design",
-    tools: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    desc: "พัฒนา Website, UI ด้วยเทคโนโลยีสมัยใหม่ พร้อม Responsive Design",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Html", "CSS", "Java Script"],
     featured: false,
   },
 ],
