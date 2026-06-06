@@ -311,3 +311,28 @@ textarea,
 select {
   font-family: var(--font-kanit), "Kanit", sans-serif !important;
 }
+
+@keyframes soft-shine {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+  }
+}
+
+.mock-window::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+  transform: translateX(-120%) skewX(-18deg);
+  animation: soft-shine 5s ease-in-out infinite;
+  pointer-events: none;
+}

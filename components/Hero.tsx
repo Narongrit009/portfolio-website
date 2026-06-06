@@ -73,71 +73,71 @@ export default function Hero({
       <div className="absolute right-[-170px] top-[-170px] h-[420px] w-[420px] rounded-full border border-dashed border-sky-300/40 spin-slow" />
 
       {/* Navbar */}
-      <nav className="section-shell sticky top-4 z-50 rounded-[1.8rem] border border-white/70 bg-white/60 px-3 py-3 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl sm:px-5">
-        <div className="flex items-center justify-between gap-3">
-          <a href="#" className="flex min-w-0 items-center gap-2.5">
-            <span className="relative grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-sky-300 to-blue-600 text-sm font-black !text-white shadow-blue-glow sm:h-11 sm:w-11">
-              N
-              <span className="absolute inset-0 rounded-2xl bg-white/25 opacity-0 transition group-hover:opacity-100" />
-            </span>
+      {/* Navbar */}
+<header className="section-shell sticky top-4 z-50">
+  <nav className="flex items-center justify-between gap-3 rounded-[1.7rem] border border-white/70 bg-white/65 px-3 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-2xl sm:px-5">
+    <a href="#" className="flex min-w-0 items-center gap-2.5">
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-sky-300 to-blue-600 text-sm font-black !text-white shadow-blue-glow sm:h-11 sm:w-11">
+        N
+      </span>
 
-            <span className="block truncate bg-gradient-to-r from-blue-700 to-sky-500 bg-clip-text text-sm font-black tracking-[-0.03em] text-transparent sm:text-base">
-              Narongrit
-            </span>
-          </a>
+      <span className="block truncate bg-gradient-to-r from-blue-700 to-sky-500 bg-clip-text text-sm font-black tracking-[-0.03em] text-transparent sm:text-base">
+        Narongrit
+      </span>
+    </a>
 
-          <div className="hidden items-center gap-1 lg:flex">
-            {t.nav.map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                className="rounded-2xl px-4 py-2 text-sm font-black text-blue-950 transition hover:bg-white/80 hover:text-blue-700 hover:shadow-[0_8px_20px_rgba(37,99,235,0.08)]"
-              >
-                {label}
-              </a>
-            ))}
-          </div>
+    <div className="hidden items-center gap-1 lg:flex">
+      {t.nav.map(([label, href]) => (
+        <a
+          key={href}
+          href={href}
+          className="rounded-2xl px-4 py-2 text-sm font-black text-blue-950 transition hover:bg-white/80 hover:text-blue-700 hover:shadow-[0_8px_20px_rgba(37,99,235,0.08)]"
+        >
+          {label}
+        </a>
+      ))}
+    </div>
 
-          <div className="flex shrink-0 items-center gap-2">
-            <button
-              type="button"
-              onClick={onToggleLang}
-              className="group inline-flex items-center gap-2 rounded-2xl border border-white/80 bg-gradient-to-r from-white via-sky-50 to-blue-50 px-2.5 py-2 text-[0.7rem] font-black text-blue-800 shadow-[0_10px_24px_rgba(37,99,235,0.14)] backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(37,99,235,0.22)] sm:px-3 sm:text-xs"
-              aria-label="Switch language"
-            >
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-white shadow-sm transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
-                {lang === "th" ? <UKFlagCircle /> : <ThaiFlagCircle />}
-              </span>
+    <div className="flex shrink-0 items-center gap-2">
+      <button
+        type="button"
+        onClick={onToggleLang}
+        className="group inline-flex items-center gap-2 rounded-2xl border border-white/80 bg-white/70 px-2.5 py-2 text-[0.7rem] font-black text-blue-800 shadow-[0_10px_24px_rgba(37,99,235,0.12)] backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_34px_rgba(37,99,235,0.18)] sm:px-3 sm:text-xs"
+        aria-label="Switch language"
+      >
+        <span className="grid h-7 w-7 place-items-center rounded-full bg-white shadow-sm transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+          {lang === "th" ? <UKFlagCircle /> : <ThaiFlagCircle />}
+        </span>
 
-              <span className="bg-gradient-to-r from-blue-800 to-sky-500 bg-clip-text text-transparent">
-                {lang === "th" ? "EN" : "TH"}
-              </span>
-            </button>
+        <span className="bg-gradient-to-r from-blue-800 to-sky-500 bg-clip-text text-transparent">
+          {lang === "th" ? "EN" : "TH"}
+        </span>
+      </button>
 
-            <a
-              href="#contact"
-              className="rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-blue-700 px-4 py-2.5 text-xs font-black !text-white shadow-lg shadow-blue-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40 sm:px-5 sm:text-sm"
-            >
-              {t.hire}
-            </a>
-          </div>
-        </div>
+      <a
+        href="#contact"
+        className="rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-blue-700 px-4 py-2.5 text-xs font-black !text-white shadow-lg shadow-blue-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/40 sm:px-5 sm:text-sm"
+      >
+        {t.hire}
+      </a>
+    </div>
+  </nav>
 
-        {/* Mobile Nav */}
-        <div className="mt-3 flex justify-center lg:hidden">
-          <div className="grid w-full grid-cols-4 gap-1 rounded-2xl bg-white/45 p-1 shadow-inner shadow-blue-950/5 backdrop-blur">
-            {t.nav.map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                className="rounded-xl px-2 py-2 text-center text-[0.72rem] font-black text-blue-950/75 transition-all duration-300 hover:bg-white hover:text-blue-700 hover:shadow-[0_8px_18px_rgba(37,99,235,0.10)]"
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
+  {/* Mobile Nav */}
+  <div className="mt-3 flex justify-center lg:hidden">
+    <div className="inline-flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-white/70 bg-white/55 p-1 shadow-[0_12px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl">
+      {t.nav.map(([label, href]) => (
+        <a
+          key={href}
+          href={href}
+          className="shrink-0 rounded-full px-4 py-2 text-[0.72rem] font-black text-blue-950/75 transition-all duration-300 hover:bg-white hover:text-blue-700 hover:shadow-[0_8px_18px_rgba(37,99,235,0.10)]"
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
 
       {/* Hero Content */}
       <div className="section-shell grid min-h-[calc(100vh-110px)] items-center gap-10 pb-6 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:py-16">
@@ -202,67 +202,73 @@ export default function Hero({
         </div>
 
         {/* Mockup */}
-        <div className="relative mx-auto w-full max-w-[540px] lg:max-w-none">
-          <div className="absolute inset-6 rounded-[3rem] bg-sky-300/30 blur-3xl" />
-          <div className="absolute -left-5 top-16 hidden h-16 w-16 rounded-full bg-blue-600/10 blur-xl sm:block" />
-          <div className="absolute -right-3 bottom-12 hidden h-20 w-20 rounded-full bg-sky-300/30 blur-2xl sm:block" />
+<div className="relative mx-auto w-full max-w-[440px] sm:max-w-[520px] lg:max-w-none">
+  <div className="absolute inset-8 rounded-[3rem] bg-sky-300/25 blur-3xl" />
+  <div className="absolute -left-5 top-16 hidden h-16 w-16 rounded-full bg-blue-600/10 blur-xl sm:block" />
+  <div className="absolute -right-3 bottom-12 hidden h-20 w-20 rounded-full bg-sky-300/30 blur-2xl sm:block" />
 
-          <div className="mock-window deep-panel relative overflow-hidden rounded-[2.3rem] p-4 shadow-[0_32px_80px_rgba(8,47,103,0.28)] sm:p-5">
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-300/20 blur-3xl" />
+  <div className="mock-window deep-panel relative overflow-hidden rounded-[1.8rem] p-3 shadow-[0_24px_60px_rgba(8,47,103,0.24)] sm:rounded-[2.3rem] sm:p-5 lg:shadow-[0_32px_80px_rgba(8,47,103,0.28)]">
+    <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+    <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-300/20 blur-3xl" />
 
-            <div className="mb-4 flex items-center justify-between rounded-2xl bg-white/10 px-4 py-3 text-white/70 backdrop-blur">
-              <div className="flex gap-2">
-                <span className="h-3 w-3 rounded-full bg-red-400 shadow-[0_0_14px_rgba(248,113,113,0.8)]" />
-                <span className="h-3 w-3 rounded-full bg-yellow-300 shadow-[0_0_14px_rgba(253,224,71,0.8)]" />
-                <span className="h-3 w-3 rounded-full bg-green-400 shadow-[0_0_14px_rgba(74,222,128,0.8)]" />
-              </div>
-              <span className="text-xs font-bold">creative-tech.app</span>
-            </div>
+    {/* Browser Bar */}
+    <div className="mb-3 flex items-center justify-between rounded-[1.2rem] bg-white/10 px-3 py-2.5 text-white/70 backdrop-blur sm:mb-4 sm:rounded-2xl sm:px-4 sm:py-3">
+      <div className="flex gap-1.5 sm:gap-2">
+        <span className="h-2.5 w-2.5 rounded-full bg-red-400 shadow-[0_0_14px_rgba(248,113,113,0.8)] sm:h-3 sm:w-3" />
+        <span className="h-2.5 w-2.5 rounded-full bg-yellow-300 shadow-[0_0_14px_rgba(253,224,71,0.8)] sm:h-3 sm:w-3" />
+        <span className="h-2.5 w-2.5 rounded-full bg-green-400 shadow-[0_0_14px_rgba(74,222,128,0.8)] sm:h-3 sm:w-3" />
+      </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="glass-panel rounded-[1.7rem] p-5 sm:col-span-2">
-                <div className="flex items-center gap-4">
-                  <div className="grid h-16 w-16 place-items-center rounded-3xl bg-gradient-to-br from-sky-200 to-blue-600 text-white shadow-blue-glow float-y">
-                    <Icon name="sparkles" className="h-8 w-8" />
-                  </div>
+      <span className="text-[0.65rem] font-bold sm:text-xs">
+        creative-tech.app
+      </span>
+    </div>
 
-                  <div>
-                    <div className="font-display text-xl font-black text-white sm:text-2xl">
-                      {t.mockTitle}
-                    </div>
-                    <div className="mt-1 text-sm font-semibold text-sky-100/80">
-                      {t.mockDesc}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[1.4rem] border border-white/15 bg-gradient-to-br from-white/14 to-white/5 p-4 backdrop-blur sm:col-span-2">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[0.68rem] font-black uppercase tracking-[0.16em] text-sky-100/80 ring-1 ring-white/10">
-                    <Icon name="sparkles" className="h-3.5 w-3.5" />
-                    Growth Mindset
-                  </div>
-
-                  <span className="h-2 w-2 rounded-full bg-sky-300 shadow-[0_0_18px_rgba(125,211,252,0.9)]" />
-                </div>
-
-                <h3 className="font-display text-lg font-black tracking-[-0.03em] text-white">
-                  {t.learningTitle}
-                </h3>
-
-                <p className="mt-2 text-sm leading-7 text-sky-100/75">
-                  {t.learningDesc}
-                </p>
-              </div>
-            </div>
+    <div className="grid gap-3 sm:gap-4">
+      {/* Main Card */}
+      <div className="glass-panel rounded-[1.35rem] p-4 sm:rounded-[1.7rem] sm:p-5">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-sky-200 to-blue-600 text-white shadow-blue-glow float-y sm:h-16 sm:w-16 sm:rounded-3xl">
+            <Icon name="sparkles" className="h-6 w-6 sm:h-8 sm:w-8" />
           </div>
 
-          <div className="glass-panel absolute -bottom-5 right-4 rounded-2xl px-4 py-3 text-sm font-black text-blue-800 shadow-xl float-y">
-            Core Skills
+          <div className="min-w-0">
+            <div className="font-display text-lg font-black leading-tight text-white sm:text-2xl">
+              {t.mockTitle}
+            </div>
+            <div className="mt-1 text-xs font-semibold text-sky-100/75 sm:text-sm">
+              {t.mockDesc}
+            </div>
           </div>
         </div>
+      </div>
+
+      {/* Growth Card */}
+      <div className="rounded-[1.35rem] border border-white/15 bg-gradient-to-br from-white/14 to-white/5 p-4 backdrop-blur sm:rounded-[1.4rem]">
+        <div className="mb-3 flex items-center justify-between sm:mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[0.58rem] font-black uppercase tracking-[0.14em] text-sky-100/80 ring-1 ring-white/10 sm:text-[0.68rem] sm:tracking-[0.16em]">
+            <Icon name="sparkles" className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+            Growth Mindset
+          </div>
+
+          <span className="h-2 w-2 rounded-full bg-sky-300 shadow-[0_0_18px_rgba(125,211,252,0.9)]" />
+        </div>
+
+        <h3 className="font-display text-base font-black tracking-[-0.03em] text-white sm:text-lg">
+          {t.learningTitle}
+        </h3>
+
+        <p className="mt-2 line-clamp-3 text-xs leading-6 text-sky-100/70 sm:line-clamp-none sm:text-sm sm:leading-7">
+          {t.learningDesc}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="glass-panel absolute -bottom-4 right-3 rounded-2xl px-3 py-2 text-xs font-black text-blue-800 shadow-xl float-y sm:-bottom-5 sm:right-4 sm:px-4 sm:py-3 sm:text-sm">
+    Creative Stack
+  </div>
+</div>
       </div>
     </section>
   );
