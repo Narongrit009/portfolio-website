@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-  display: ["Prompt", "Noto Sans Thai", "sans-serif"],
-  body: ["Noto Sans Thai", "Outfit", "sans-serif"],
-  english: ["Outfit", "sans-serif"],
-},
+        display: ["var(--font-kanit)", "sans-serif"],
+        body: ["var(--font-kanit)", "sans-serif"],
+        english: ["var(--font-outfit)", "sans-serif"],
+      },
       boxShadow: {
         "blue-glow": "0 0 40px rgba(56,189,248,0.35)",
       },

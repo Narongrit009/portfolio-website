@@ -30,19 +30,20 @@ export default function WorkCard({
 
   return (
     <button
-  type="button"
-  onClick={() => {
-    onOpen?.(project);
-  }}
-  className="group block w-full text-left"
->
+      type="button"
+      onClick={() => {
+        onOpen?.(project);
+      }}
+      className="group block w-full text-left"
+    >
       <article className="h-full overflow-hidden rounded-[2rem] border border-white/80 bg-white/75 shadow-[0_18px_50px_rgba(14,125,228,.12)] backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(14,125,228,.20)]">
-        <div className="relative aspect-[1.35/1] overflow-hidden bg-gradient-to-br from-sky-100 to-blue-600">
+        {/* Image Cover */}
+        <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-sky-100 to-blue-600">
           {previewImage ? (
             <img
               src={previewImage}
               alt={project.title[lang]}
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
             />
           ) : (
             <div
@@ -54,12 +55,15 @@ export default function WorkCard({
             </div>
           )}
 
+          {/* Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-blue-950/65 via-blue-950/10 to-transparent" />
 
-          <div className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/20 px-3 py-1 text-xs font-black text-white backdrop-blur">
-            {project.label[lang]}
-          </div>
+          {/* Category Label */}
+          <div className="absolute right-4 top-4 rounded-full border border-white/30 bg-white/20 px-3 py-1 text-xs font-black text-white backdrop-blur">
+  {project.label[lang]}
+</div>
 
+          {/* View Details Button */}
           <div className="absolute inset-x-4 bottom-4">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-xs font-black text-blue-800 shadow-lg backdrop-blur transition group-hover:bg-blue-700 group-hover:!text-white">
               {viewText[lang]}
@@ -68,6 +72,7 @@ export default function WorkCard({
           </div>
         </div>
 
+        {/* Content */}
         <div className="p-5 sm:p-6">
           <h3 className="font-display text-xl font-black tracking-[-0.04em] text-blue-950">
             {project.title[lang]}

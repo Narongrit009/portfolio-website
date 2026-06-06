@@ -6,6 +6,8 @@ import WorkCard from "@/components/WorkCard";
 import { Icon } from "@/components/Icons";
 import type { Lang } from "@/lib/i18n";
 
+type PortfolioFilter = "recommend" | ProjectCategory | "all";
+
 const copy = {
   th: {
     eyebrow: "My Works",
@@ -14,10 +16,11 @@ const copy = {
     close: "ปิด",
     openWebsite: "เปิดเว็บไซต์",
     filters: [
-      { label: "All", value: "all" },
+      { label: "Recommend", value: "recommend" },
       { label: "Graphic", value: "graphic" },
       { label: "Video", value: "video" },
       { label: "Website", value: "website" },
+      { label: "All", value: "all" },
     ],
   },
   en: {
@@ -27,27 +30,32 @@ const copy = {
     close: "Close",
     openWebsite: "Open Website",
     filters: [
-      { label: "All", value: "all" },
+      { label: "Recommend", value: "recommend" },
       { label: "Graphic", value: "graphic" },
       { label: "Video", value: "video" },
       { label: "Website", value: "website" },
+      { label: "All", value: "all" },
     ],
   },
 } as const;
 
 export default function PortfolioGrid({ lang }: { lang: Lang }) {
-  const [active, setActive] = useState<"all" | ProjectCategory>("all");
+  const [active, setActive] = useState<PortfolioFilter>("recommend");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const t = copy[lang];
 
   const filtered = useMemo(() => {
-  const visibleProjects = projects.filter((project) => project.featured);
+    if (active === "recommend") {
+      return projects.filter((project) => project.featured);
+    }
 
-  return active === "all"
-    ? visibleProjects
-    : visibleProjects.filter((project) => project.category === active);
-}, [active]);
+    if (active === "all") {
+      return projects;
+    }
+
+    return projects.filter((project) => project.category === active);
+  }, [active]);
 
   useEffect(() => {
     if (!selectedProject) return;
@@ -85,9 +93,7 @@ export default function PortfolioGrid({ lang }: { lang: Lang }) {
             <button
               key={filter.value}
               type="button"
-              onClick={() =>
-                setActive(filter.value as "all" | ProjectCategory)
-              }
+              onClick={() => setActive(filter.value as PortfolioFilter)}
               className={`shrink-0 rounded-full px-5 py-3 text-sm font-black transition ${
                 active === filter.value
                   ? "bg-gradient-to-r from-sky-400 to-blue-700 text-white shadow-lg shadow-blue-700/20"
@@ -98,20 +104,19 @@ export default function PortfolioGrid({ lang }: { lang: Lang }) {
             </button>
           ))}
         </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-  {filtered.map((project) => (
-  <WorkCard
-  key={project.id}
-  project={project}
-  lang={lang}
-  onOpen={(project) => {
-    console.log("OPEN PROJECT:", project);
-    setSelectedProject(project);
-  }}
-/>
-))}
-</div>
 
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((project) => (
+            <WorkCard
+              key={project.id}
+              project={project}
+              lang={lang}
+              onOpen={(project) => {
+                setSelectedProject(project);
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {selectedProject && (
@@ -182,7 +187,7 @@ function ProjectModal({
         </div>
 
         <div className="grid max-h-[76vh] overflow-y-auto md:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative bg-[radial-gradient(circle_at_20%_0%,rgba(56,189,248,.28),transparent_18rem),linear-gradient(145deg,#081e45,#0c366c_58%,#034d9e)] p-4 sm:p-5">
+          <div className="relative flex items-center justify-center bg-[radial-gradient(circle_at_20%_0%,rgba(56,189,248,.28),transparent_18rem),linear-gradient(145deg,#081e45,#0c366c_58%,#034d9e)] p-4 sm:p-5">
             {isVideo && project.youtubeId && !project.youtubeId.includes("YOUR_") ? (
               <div className="mx-auto aspect-[9/16] max-h-[58vh] w-full max-w-[250px] overflow-hidden rounded-[1.35rem] border border-white/15 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                 <iframe
@@ -194,12 +199,14 @@ function ProjectModal({
                 />
               </div>
             ) : hasRealImage ? (
-              <div className="flex min-h-[280px] items-center justify-center overflow-hidden rounded-[1.35rem] border border-white/15 bg-white/10 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur">
-                <img
-                  src={project.imageUrl}
-                  alt={project.title[lang]}
-                  className="max-h-[58vh] w-full rounded-[1rem] object-contain"
-                />
+              <div className="flex min-h-[280px] items-center justify-center">
+                <div className="inline-flex max-w-full overflow-hidden rounded-[1.35rem] border border-white/15 bg-white/10 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title[lang]}
+                    className="h-auto max-h-[58vh] max-w-full rounded-[1rem] object-contain"
+                  />
+                </div>
               </div>
             ) : (
               <div

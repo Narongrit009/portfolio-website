@@ -302,3 +302,12 @@ a {
 .modal-in {
   animation: modalIn 240ms ease both;
 }
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-kanit), "Kanit", sans-serif !important;
+}
