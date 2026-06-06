@@ -425,8 +425,8 @@ export const projects: Project[] = [
 {
   id: "spy-link",
   title: {
-    th: "SPY Link",
-    en: "SPY Link",
+    th: "UX/UI Design SPY Link",
+    en: "UX/UI Design SPY Link",
   },
   category: "website",
   label: {
@@ -447,8 +447,8 @@ export const projects: Project[] = [
 {
   id: "kp-house",
   title: {
-    th: "K.P. House",
-    en: "K.P. House",
+    th: "UX/UI Design K.P. House",
+    en: "UX/UI Design K.P. House",
   },
   category: "website",
   label: {
@@ -464,7 +464,73 @@ export const projects: Project[] = [
   gradient: "from-pink-200 via-pink-500 to-rose-700",
   websiteUrl: "https://www.figma.com/design/3hTnQmuVWUTAY50Axhzo0F/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2?node-id=0-1&t=O4bEuTjJN8GsvGzN-1",
   imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780741418/figma3_byufcv.png",
+  featured: false,
+},
+{
+  id: "safe-eater",
+  title: {
+    th: "UX/UI Design Safe Eater",
+    en: "UX/UI Design Safe Eater",
+  },
+  category: "website",
+  label: {
+    th: "Website",
+    en: "Website",
+  },
+  description: {
+    th: "ออกแบบ UX/UI สำหรับ Safe Eater แอปพลิเคชันด้านสุขภาพและโภชนาการ ที่ช่วยให้ผู้ใช้งานค้นหาเมนูอาหาร ดูข้อมูลโภชนาการ และติดตามพฤติกรรมการกินได้อย่างสะดวก โดยเน้นดีไซน์ที่สดใส ใช้งานง่าย และช่วยให้ผู้ใช้เข้าถึงข้อมูลสำคัญได้อย่างชัดเจน เพื่อสร้างประสบการณ์ใช้งานที่เป็นมิตรและส่งเสริมการดูแลสุขภาพในชีวิตประจำวัน",
+    en: "A UX/UI design project for Safe Eater, a health and nutrition application that helps users explore food menus, view nutrition information, and track their eating habits conveniently. The design focuses on a fresh, user-friendly interface that makes important health data easy to access, creating an engaging experience that supports healthier daily choices.",
+  },
+  tools: ["Figma", "UX/UI Design", "Wireframe", "Prototype"],
+  icon: "globe",
+  gradient: "from-sky-200 via-cyan-400 to-emerald-400",
+  websiteUrl: "https://www.figma.com/design/VYew8gMHaSZBHvNdjzsfv2/Project-SafeEater?node-id=0-1&t=hxyPyt2pf5TqtFlL-1",
+  imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780742197/figma4_k5dk9r.png",
   featured: true,
+},
+{
+  id: "the-sun-odyssey",
+  title: {
+    th: "UX/UI Design The Sun Odyssey",
+    en: "UX/UI Design The Sun Odyssey",
+  },
+  category: "website",
+  label: {
+    th: "Website",
+    en: "Website",
+  },
+  description: {
+    th: "ออกแบบ UX/UI สำหรับเว็บไซต์ The Sun Odyssey แพลตฟอร์มท่องเที่ยวและแพ็กเกจทัวร์ระดับพรีเมียม โดยเน้นภาพลักษณ์ที่หรูหรา น่าเชื่อถือ และใช้งานง่าย ออกแบบทั้งฝั่งผู้ใช้งานและหน้าจัดการข้อมูล เพื่อให้การเลือกแพ็กเกจ ดูรายละเอียดทริป และจัดการข้อมูลทัวร์เป็นไปอย่างลื่นไหล พร้อมช่วยสะท้อนเอกลักษณ์ของแบรนด์ด้านการท่องเที่ยวได้อย่างชัดเจน",
+    en: "A UX/UI website design project for The Sun Odyssey, a premium travel and tour platform. The design focuses on a luxurious, trustworthy, and user-friendly experience, covering both customer-facing pages and management interfaces. It helps users explore tour packages, view trip details, and navigate the platform smoothly while reflecting a strong premium travel brand identity.",
+  },
+  tools: ["Figma", "UX/UI Design", "Wireframe", "Prototype"],
+  icon: "globe",
+  gradient: "from-amber-200 via-amber-500 to-yellow-700",
+  websiteUrl: "https://www.figma.com/design/YHjYxNaHxLps9lrLtL4r2C/The-Sun-Odyssey?node-id=5-3&t=DgajAi8NZkk1UBMO-1",
+  imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780742520/figma5_vpyb65.png",
+  featured: false,
+},
+{
+  id: "depa-careerpath",
+  title: {
+    th: "UX/UI Design depa CareerPath",
+    en: "UX/UI Design depa CareerPath",
+  },
+  category: "website",
+  label: {
+    th: "Website",
+    en: "Website",
+  },
+  description: {
+    th: "ออกแบบ UX/UI สำหรับระบบ depa CareerPath แพลตฟอร์มวางแผนเส้นทางอาชีพและการพัฒนาตนเอง โดยออกแบบโครงสร้างการใช้งานให้เข้าใจง่าย ครอบคลุมการจัดการข้อมูลโปรไฟล์ เส้นทางอาชีพ สุขภาพ และการวางแผนด้านการเงิน พร้อมออกแบบหน้าจอทั้งฝั่งผู้ใช้งานและระบบภายใน เพื่อให้ผู้ใช้เข้าถึงข้อมูลสำคัญได้อย่างเป็นระบบและใช้งานได้สะดวก",
+    en: "A UX/UI website design project for depa CareerPath, a digital platform for career planning and personal development. The design focuses on clear information architecture and user-friendly workflows, covering profile management, career path planning, health, and wealth-related features. It includes both user-facing and internal system screens to help users access important information efficiently and systematically.",
+  },
+  tools: ["Figma", "UX/UI Design", "Wireframe", "Prototype"],
+  icon: "globe",
+  gradient: "from-yellow-200 via-yellow-400 to-blue-900",
+  websiteUrl: "https://www.figma.com/design/xC7uqovMMrkzWObLpNu6t0/depa-CareerPath-UI?node-id=34-31&t=hxyPyt2pf5TqtFlL-1",
+  imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780742853/fihma6_hwlpiv.png",
+  featured: false,
 },
   
 ];
