@@ -288,11 +288,10 @@ a {
     width: 100%;
   }
 }
-
 @keyframes modalIn {
   from {
     opacity: 0;
-    transform: translateY(18px) scale(0.97);
+    transform: translateY(14px) scale(0.97);
   }
   to {
     opacity: 1;
@@ -301,5 +300,5 @@ a {
 }
 
 .modal-in {
-  animation: modalIn 260ms ease both;
+  animation: modalIn 240ms ease both;
 }

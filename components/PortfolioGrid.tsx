@@ -148,28 +148,24 @@ function ProjectModal({
 
   return (
     <div className="fixed inset-0 z-[999999] flex items-center justify-center px-4 py-6">
-      {/* Backdrop */}
       <button
         type="button"
         aria-label={closeText}
         onClick={onClose}
-        className="absolute inset-0 bg-blue-950/75 backdrop-blur-xl"
+        className="absolute inset-0 bg-slate-950/55 backdrop-blur-md"
       />
 
-      {/* Glow decoration */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400/20 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400/20 blur-3xl" />
 
-      {/* Modal */}
-      <div className="modal-in relative z-10 w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/25 bg-white/92 shadow-[0_40px_120px_rgba(8,30,69,0.55)] backdrop-blur-2xl sm:rounded-[2.4rem]">
-        {/* Top bar */}
-        <div className="flex items-center justify-between gap-4 border-b border-blue-100/80 bg-gradient-to-r from-white via-sky-50 to-blue-50 px-5 py-4 sm:px-7">
+      <div className="modal-in relative z-10 w-full max-w-[860px] overflow-hidden rounded-[1.8rem] border border-white/30 bg-white/95 shadow-[0_30px_90px_rgba(8,30,69,0.38)] backdrop-blur-2xl">
+        <div className="flex items-center justify-between gap-4 border-b border-blue-100/80 bg-gradient-to-r from-white via-sky-50 to-white px-5 py-4">
           <div className="min-w-0">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[0.68rem] font-black uppercase tracking-[0.16em] text-blue-700">
-              <span className="h-2 w-2 rounded-full bg-sky-400 shadow-[0_0_14px_rgba(56,189,248,0.8)]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-[0.65rem] font-black uppercase tracking-[0.14em] text-blue-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-sky-400 shadow-[0_0_12px_rgba(56,189,248,0.9)]" />
               {project.label[lang]}
             </div>
 
-            <h3 className="mt-2 truncate font-display text-xl font-black tracking-[-0.04em] text-blue-950 sm:text-2xl">
+            <h3 className="mt-2 truncate font-display text-lg font-black tracking-[-0.04em] text-blue-950 sm:text-xl">
               {project.title[lang]}
             </h3>
           </div>
@@ -177,89 +173,83 @@ function ProjectModal({
           <button
             type="button"
             onClick={onClose}
-            className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-blue-100 bg-white text-blue-900 shadow-[0_10px_26px_rgba(15,23,42,0.08)] transition hover:bg-blue-700 hover:!text-white"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-blue-100 bg-white text-sm font-black text-blue-900 shadow-[0_8px_20px_rgba(15,23,42,0.08)] transition hover:bg-blue-700 hover:!text-white"
           >
             ✕
           </button>
         </div>
 
-        {/* Content */}
-        <div className="grid max-h-[82vh] overflow-y-auto lg:grid-cols-[1.12fr_0.88fr]">
-          {/* Preview side */}
-          <div className="relative overflow-hidden bg-[radial-gradient(circle_at_20%_0%,rgba(56,189,248,.35),transparent_22rem),linear-gradient(145deg,#081e45,#0c366c_55%,#034d9e)] p-4 sm:p-6 lg:p-8">
-            <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl" />
-
-            <div className="relative">
-              {isVideo && project.youtubeId && !project.youtubeId.includes("YOUR_") ? (
-                <div className="mx-auto aspect-[9/16] max-h-[72vh] w-full max-w-[370px] overflow-hidden rounded-[1.7rem] border border-white/15 bg-black shadow-[0_28px_90px_rgba(0,0,0,0.42)]">
-                  <iframe
-                    className="h-full w-full"
-                    src={`https://www.youtube.com/embed/${project.youtubeId}`}
-                    title={project.title[lang]}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
+        <div className="grid max-h-[76vh] overflow-y-auto md:grid-cols-[0.95fr_1.05fr]">
+          <div className="relative bg-[radial-gradient(circle_at_20%_0%,rgba(56,189,248,.28),transparent_18rem),linear-gradient(145deg,#081e45,#0c366c_58%,#034d9e)] p-4 sm:p-5">
+            {isVideo && project.youtubeId && !project.youtubeId.includes("YOUR_") ? (
+              <div className="mx-auto aspect-[9/16] max-h-[58vh] w-full max-w-[250px] overflow-hidden rounded-[1.35rem] border border-white/15 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube.com/embed/${project.youtubeId}`}
+                  title={project.title[lang]}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            ) : hasRealImage ? (
+              <div className="flex min-h-[280px] items-center justify-center overflow-hidden rounded-[1.35rem] border border-white/15 bg-white/10 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title[lang]}
+                  className="max-h-[58vh] w-full rounded-[1rem] object-contain"
+                />
+              </div>
+            ) : (
+              <div
+                className={`grid min-h-[280px] place-items-center rounded-[1.35rem] border border-white/15 bg-gradient-to-br ${project.gradient} shadow-[0_20px_60px_rgba(0,0,0,0.28)]`}
+              >
+                <div className="grid h-20 w-20 place-items-center rounded-[1.5rem] bg-white/18 text-white backdrop-blur">
+                  <Icon name={project.icon} className="h-10 w-10" />
                 </div>
-              ) : hasRealImage ? (
-                <div className="overflow-hidden rounded-[1.7rem] border border-white/15 bg-white/10 p-2 shadow-[0_28px_90px_rgba(0,0,0,0.32)] backdrop-blur">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title[lang]}
-                    className="max-h-[72vh] w-full rounded-[1.35rem] object-contain"
-                  />
-                </div>
-              ) : (
-                <div
-                  className={`grid min-h-[420px] place-items-center rounded-[1.7rem] border border-white/15 bg-gradient-to-br ${project.gradient} shadow-[0_28px_90px_rgba(0,0,0,0.32)]`}
-                >
-                  <div className="grid h-28 w-28 place-items-center rounded-[2rem] bg-white/18 text-white backdrop-blur">
-                    <Icon name={project.icon} className="h-14 w-14" />
-                  </div>
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
 
-          {/* Detail side */}
-          <div className="relative bg-white p-6 sm:p-8 lg:p-9">
-            <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-sky-100/70 blur-3xl" />
+          <div className="relative bg-white p-5 sm:p-6">
+            <div className="pointer-events-none absolute right-0 top-0 h-40 w-40 rounded-full bg-sky-100/80 blur-3xl" />
 
             <div className="relative">
-              <div className="mb-5 flex flex-wrap gap-2">
+              <div className="mb-4 flex flex-wrap gap-2">
                 {project.tools.map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-black text-blue-700"
+                    className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[0.68rem] font-black text-blue-700"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
 
-              <h4 className="font-display text-[clamp(2rem,4vw,3.4rem)] font-black leading-[0.95] tracking-[-0.07em] text-blue-950">
+              <h4 className="font-display text-[clamp(1.75rem,4vw,2.6rem)] font-black leading-[0.98] tracking-[-0.06em] text-blue-950">
                 {project.title[lang]}
               </h4>
 
-              <p className="mt-5 text-base leading-8 text-slate-600">
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
                 {project.description[lang]}
               </p>
 
-              <div className="mt-8 rounded-[1.5rem] border border-blue-100 bg-gradient-to-br from-sky-50 to-white p-5 shadow-[0_18px_48px_rgba(14,125,228,0.08)]">
-                <div className="text-xs font-black uppercase tracking-[0.16em] text-blue-500">
+              <div className="mt-6 rounded-[1.25rem] border border-blue-100 bg-gradient-to-br from-sky-50 to-white p-4 shadow-[0_14px_36px_rgba(14,125,228,0.07)]">
+                <div className="text-[0.65rem] font-black uppercase tracking-[0.16em] text-blue-500">
                   Project Type
                 </div>
-                <div className="mt-2 flex items-center gap-3">
-                  <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-400 to-blue-700 text-white shadow-lg shadow-blue-600/20">
+
+                <div className="mt-3 flex items-center gap-3">
+                  <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-700 text-white shadow-lg shadow-blue-600/20">
                     <Icon name={project.icon} className="h-5 w-5" />
                   </div>
+
                   <div>
-                    <div className="font-black text-blue-950">
+                    <div className="text-sm font-black text-blue-950">
                       {project.label[lang]}
                     </div>
-                    <div className="text-sm text-slate-500">
+                    <div className="text-xs text-slate-500">
                       {isVideo
-                        ? "Vertical video preview"
+                        ? "Vertical 9:16 preview"
                         : isWebsite
                           ? "Live website project"
                           : "Cloudinary image preview"}
@@ -268,13 +258,13 @@ function ProjectModal({
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 {isWebsite && project.websiteUrl && (
                   <a
                     href={project.websiteUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-blue-700 px-6 py-3.5 text-sm font-black !text-white shadow-[0_16px_40px_rgba(37,99,235,0.28)] transition hover:-translate-y-0.5 hover:brightness-110"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-sky-400 via-blue-500 to-blue-700 px-5 py-3 text-sm font-black !text-white shadow-[0_14px_34px_rgba(37,99,235,0.25)] transition hover:-translate-y-0.5 hover:brightness-110"
                   >
                     {openWebsiteText}
                     <Icon name="external" className="h-4 w-4" />
@@ -284,7 +274,7 @@ function ProjectModal({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="inline-flex items-center justify-center rounded-2xl border border-blue-100 bg-white px-6 py-3.5 text-sm font-black text-blue-800 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition hover:bg-blue-50"
+                  className="inline-flex items-center justify-center rounded-2xl border border-blue-100 bg-white px-5 py-3 text-sm font-black text-blue-800 shadow-[0_10px_26px_rgba(15,23,42,0.06)] transition hover:bg-blue-50"
                 >
                   {closeText}
                 </button>
