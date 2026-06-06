@@ -42,10 +42,12 @@ export default function PortfolioGrid({ lang }: { lang: Lang }) {
   const t = copy[lang];
 
   const filtered = useMemo(() => {
-    return active === "all"
-      ? projects
-      : projects.filter((project) => project.category === active);
-  }, [active]);
+  const visibleProjects = projects.filter((project) => project.featured);
+
+  return active === "all"
+    ? visibleProjects
+    : visibleProjects.filter((project) => project.category === active);
+}, [active]);
 
   useEffect(() => {
     if (!selectedProject) return;

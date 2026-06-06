@@ -26,7 +26,7 @@ export default function Footer({ lang }: { lang: Lang }) {
           <a className="hover:text-white" href="#contact">Contact</a>
         </div>
         <p className="mt-8 text-xs font-semibold text-sky-100/38">{t.built}</p>
-        <a href="#" className="mx-auto mt-7 grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-300 to-blue-700 font-black shadow-blue-glow">↑</a>
+        
       </div>
     </footer>
   );
