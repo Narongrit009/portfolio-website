@@ -77,12 +77,14 @@ export default function Hero({
 <header className="section-shell sticky top-4 z-50">
   <nav className="flex items-center justify-between gap-3 rounded-[1.7rem] border border-white/70 bg-white/65 px-3 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-2xl sm:px-5">
     <a href="#" className="flex min-w-0 items-center gap-2.5">
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-sky-300 to-blue-600 text-sm font-black !text-white shadow-blue-glow sm:h-11 sm:w-11">
-        N
-      </span>
+      <img
+  src="/icon-web.png"
+  alt="Narongrit Logo"
+  className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
+/>
 
       <span className="block truncate bg-gradient-to-r from-blue-700 to-sky-500 bg-clip-text text-sm font-black tracking-[-0.03em] text-transparent sm:text-base">
-        Narongrit
+        Portfolio
       </span>
     </a>
 

@@ -80,7 +80,7 @@ export default function FloatingMenu({ lang }: { lang: Lang }) {
   const t = copy[lang];
 
   return (
-    <div className="fixed bottom-5 right-5 z-[99999] sm:bottom-7 sm:right-7">
+    <div className="fixed bottom-[5.5rem] right-5 z-[99999] sm:bottom-24 sm:right-7">
       {/* soft glow only */}
       <div
         className={`pointer-events-none absolute bottom-0 right-0 h-32 w-32 rounded-full bg-sky-400/25 blur-2xl transition-all duration-300 ${

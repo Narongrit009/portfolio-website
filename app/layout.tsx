@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "Narongrit Portfolio | Graphic Designer, Video Editor & Programmer",
   description:
     "Portfolio website of Narongrit showcasing graphic design, video editing, and programming works.",
+    icons: {
+    icon: "/icon-web.svg",
+    shortcut: "/icon-web.svg",
+    apple: "/icon-web.svg",
+  },
   openGraph: {
     title: "Narongrit Portfolio",
     description: "Graphic Design · Video Editing · Programming",
