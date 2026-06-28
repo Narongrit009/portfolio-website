@@ -41,7 +41,7 @@ export const projects: Project[] = [
   icon: "palette",
   gradient: "from-blue-950 via-blue-700 to-sky-400",
   imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780676448/NFP_z4om9q.png",
-  featured: true,
+  featured: false,
 },
   {
   id: "trading-mindset-chiangrai-2026",
@@ -187,7 +187,7 @@ export const projects: Project[] = [
   icon: "play",
   gradient: "from-stone-700 via-neutral-400 to-amber-100",
   youtubeId: "TretxEcIYl0",
-  featured: false,
+  featured: true,
 },{
   id: "pong-phrabat-land-review",
   title: {
@@ -207,7 +207,7 @@ export const projects: Project[] = [
   icon: "play",
   gradient: "from-emerald-800 via-green-500 to-lime-200",
   youtubeId: "I_AS8ADQhck",
-  featured: false,
+  featured: true,
 },
 {
   id: "ea-suitable-3-types",
@@ -249,7 +249,7 @@ export const projects: Project[] = [
   icon: "video",
   gradient: "from-blue-950 via-blue-700 to-cyan-300",
   youtubeId: "Q4sixSzvLaM",
-  featured: true,
+  featured: false,
 },
 {
   id: "ea-expert-advisor-promote",
@@ -291,7 +291,7 @@ export const projects: Project[] = [
   icon: "play",
   gradient: "from-sky-700 via-blue-500 to-cyan-300",
   youtubeId: "oviReU_BmOE",
-  featured: true,
+  featured: false,
 },
 {
   id: "behind-the-edit-forex-beginner-start",
@@ -527,7 +527,7 @@ export const projects: Project[] = [
   gradient: "from-sky-200 via-cyan-400 to-emerald-400",
   websiteUrl: "https://www.figma.com/design/VYew8gMHaSZBHvNdjzsfv2/Project-SafeEater?node-id=0-1&t=hxyPyt2pf5TqtFlL-1",
   imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780742197/figma4_k5dk9r.png",
-  featured: true,
+  featured: false,
 },
 {
   id: "the-sun-odyssey",
