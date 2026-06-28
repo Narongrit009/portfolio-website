@@ -169,6 +169,47 @@ export const projects: Project[] = [
   imageUrl: "https://res.cloudinary.com/dnikfaqwc/image/upload/v1780712159/cafe_jiwece.jpg",
   featured: false,
 },{
+  id: "muji-house-review",
+  title: {
+    th: "รีวิวบ้านสไตล์มูจิ",
+    en: "Muji Style House Review",
+  },
+  category: "video",
+  label: {
+    th: "Video Editing",
+    en: "Video Editing",
+  },
+  description: {
+    th: "ตัดต่อวิดีโอสั้นแนวตั้ง 9:16 สำหรับคอนเทนต์รีวิวบ้านสไตล์มูจิ เน้นบรรยากาศอบอุ่น เรียบง่าย มินิมอล ถ่ายทอดจุดเด่นของบ้าน พื้นที่ใช้สอย แสงธรรมชาติ และดีไซน์ภายในให้ดูน่าอยู่ เหมาะสำหรับ Shorts/TikTok/Reels",
+    en: "A vertical 9:16 short-form house review video featuring a Muji-inspired home style. The edit highlights a warm, simple, and minimalist atmosphere, showcasing the home's key spaces, natural lighting, interior design, and livable mood, optimized for Shorts, TikTok, and Reels.",
+  },
+  tools: ["CapCut"],
+  icon: "play",
+  gradient: "from-stone-700 via-neutral-400 to-amber-100",
+  youtubeId: "TretxEcIYl0",
+  featured: false,
+},{
+  id: "pong-phrabat-land-review",
+  title: {
+    th: "รีวิวที่ดินโป่งพระบาท",
+    en: "Pong Phrabat Land Review",
+  },
+  category: "video",
+  label: {
+    th: "Video Editing",
+    en: "Video Editing",
+  },
+  description: {
+    th: "ตัดต่อวิดีโอสั้นแนวตั้ง 9:16 สำหรับคอนเทนต์รีวิวที่ดินทำเลโป่งพระบาท ถ่ายทอดบรรยากาศพื้นที่จริง มุมมองโดยรอบ ทางเข้า จุดเด่นของทำเล และศักยภาพการใช้งานของที่ดิน พร้อมจังหวะภาพและข้อความที่เหมาะสำหรับ Shorts/TikTok/Reels",
+    en: "A vertical 9:16 short-form land review video showcasing a property in the Pong Phrabat area. The edit presents the real location, surrounding views, access route, location highlights, and land potential with pacing and text highlights optimized for Shorts, TikTok, and Reels.",
+  },
+  tools: ["CapCut"],
+  icon: "play",
+  gradient: "from-emerald-800 via-green-500 to-lime-200",
+  youtubeId: "I_AS8ADQhck",
+  featured: false,
+},
+{
   id: "ea-suitable-3-types",
   title: {
     th: "คน 3 ประเภทที่เหมาะกับการใช้ EA",
@@ -535,14 +576,4 @@ export const projects: Project[] = [
   
 ];
 
-export const showreel = {
-  title: {
-    th: "เบื้องหลังการตัดต่อ - มือใหม่ Forex ควรเริ่มจากจุดไหนก่อน?",
-    en: "Behind the Edit - Where Should Forex Beginners Start?",
-  },
-  description: {
-    th: "วิดีโอเบื้องหลังการตัดต่อคอนเทนต์ให้ความรู้ Forex สำหรับมือใหม่ แสดงกระบวนการทำงานด้านการลำดับภาพ การใส่ข้อความ จังหวะการตัด และการจัดองค์ประกอบให้คอนเทนต์เข้าใจง่ายและน่าติดตามมากขึ้น",
-    en: "A behind-the-scenes editing video for Forex beginner educational content, showing the workflow behind sequencing, text placement, pacing, and visual composition to make the content clearer and more engaging.",
-  },
-  youtubeId: "XXdM9XSoFUI",
-};
+export const showreel = { title: { th: "รีวิวบ้านสไตล์มูจิ", en: "Muji Style House Review", }, description: { th: "วิดีโอรีวิวบ้านสไตล์มูจิ ถ่ายทอดบรรยากาศบ้านที่อบอุ่น เรียบง่าย และมินิมอล เน้นการลำดับภาพให้เห็นพื้นที่ใช้สอย แสงธรรมชาติ ดีไซน์ภายใน และมุมมองโดยรวมของบ้านให้น่าอยู่ เหมาะสำหรับคอนเทนต์แนว Shorts/TikTok/Reels", en: "A Muji-style house review video showcasing a warm, simple, and minimalist living atmosphere. The edit highlights the home's functional spaces, natural lighting, interior design, and overall livable mood, optimized for Shorts, TikTok, and Reels.", }, youtubeId: "TretxEcIYl0", };
